@@ -9,7 +9,7 @@ using System.Runtime.CompilerServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Tunous")]
 [assembly: AssemblyProduct("BotBitsExt.Physics")]
-[assembly: AssemblyCopyright("Thanel")]
+[assembly: AssemblyCopyright("Tunous")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

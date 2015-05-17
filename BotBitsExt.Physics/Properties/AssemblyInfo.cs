@@ -7,7 +7,7 @@ using System.Runtime.CompilerServices;
 [assembly: AssemblyTitle("BotBitsExt.Physics")]
 [assembly: AssemblyDescription("A physics extension for BotBits")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Tunous")]
 [assembly: AssemblyProduct("BotBitsExt.Physics")]
 [assembly: AssemblyCopyright("Thanel")]
 [assembly: AssemblyTrademark("")]

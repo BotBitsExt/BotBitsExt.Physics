@@ -44,7 +44,7 @@ namespace BotBitsExt.Physics
         /// Handles the PlayerIOMessage in physics world.
         /// </summary>
         /// <param name="e">PlayerIOMessage event.</param>
-        [EventListener(EventPriority.Highest)]
+        [EventListener(GlobalPriority.BeforeMost)]
         private void OnMessage(PlayerIOMessageEvent e)
         {
             PhysicsWorld.HandleMessage(e.Message);

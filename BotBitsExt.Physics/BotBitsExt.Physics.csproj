@@ -29,7 +29,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BotBits, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8d4a7b115348c43d, processorArchitecture=MSIL">
-      <HintPath>..\packages\BotBits.1.5.18\lib\net40\BotBits.dll</HintPath>
+      <HintPath>..\packages\BotBits.1.6.10\lib\net40\BotBits.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="EEPhysics, Version=1.3.4.0, Culture=neutral, PublicKeyToken=a2e029ce48d44e59, processorArchitecture=MSIL">

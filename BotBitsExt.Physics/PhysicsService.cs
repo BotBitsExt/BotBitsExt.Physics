@@ -18,7 +18,7 @@ namespace BotBitsExt.Physics
         /// </summary>
         /// <value>The physics world.</value>
         [UsedImplicitly]
-        public PhysicsWorld PhysicsWorld { get; }
+        public PhysicsWorld PhysicsWorld { get; private set; }
 
         void IDisposable.Dispose()
         {

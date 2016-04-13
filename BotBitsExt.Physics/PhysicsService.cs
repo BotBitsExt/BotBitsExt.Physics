@@ -20,39 +20,27 @@ namespace BotBitsExt.Physics
         [UsedImplicitly]
         public PhysicsWorld PhysicsWorld { get; private set; }
 
-        void IDisposable.Dispose()
-        {
-            PhysicsWorld.StopSimulation();
-        }
+        void IDisposable.Dispose() { PhysicsWorld.StopSimulation(); }
 
         /// <summary>
         ///     Sets the physics player when someone joins world.
         /// </summary>
         /// <param name="e">Join event.</param>
         [EventListener]
-        private void On(JoinEvent e)
-        {
-            e.Player.SetPhysicsPlayer(PhysicsWorld.Players[e.Player.UserId]);
-        }
+        private void On(JoinEvent e) { e.Player.SetPhysicsPlayer(PhysicsWorld.Players[e.Player.UserId]); }
 
         /// <summary>
         ///     Sets the physics player when bot joins world.
         /// </summary>
         /// <param name="e">Init event.</param>
         [EventListener]
-        private void On(InitEvent e)
-        {
-            e.Player.SetPhysicsPlayer(PhysicsWorld.Players[e.Player.UserId]);
-        }
+        private void On(InitEvent e) { e.Player.SetPhysicsPlayer(PhysicsWorld.Players[e.Player.UserId]); }
 
         /// <summary>
         ///     Handles the PlayerIOMessage in physics world.
         /// </summary>
         /// <param name="e">PlayerIOMessage event.</param>
         [EventListener(GlobalPriority.BeforeMost)]
-        private void On(PlayerIOMessageEvent e)
-        {
-            PhysicsWorld.HandleMessage(e.Message);
-        }
+        private void On(PlayerIOMessageEvent e) { PhysicsWorld.HandleMessage(e.Message); }
     }
 }

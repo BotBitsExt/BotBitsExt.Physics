@@ -28,12 +28,12 @@
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BotBits, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8d4a7b115348c43d, processorArchitecture=MSIL">
-      <HintPath>..\packages\BotBits.209.1.0\lib\net40\BotBits.dll</HintPath>
+    <Reference Include="BotBits, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\BotBits.211.4.3\lib\net40\BotBits.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="EEPhysics, Version=1.4.2.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\EEPhysics.1.4.2.1\lib\net40-Client\EEPhysics.dll</HintPath>
+    <Reference Include="EEPhysics, Version=1.4.3.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EEPhysics.1.4.3.1\lib\net40-Client\EEPhysics.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="JetBrains.Annotations, Version=10.1.4.0, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">

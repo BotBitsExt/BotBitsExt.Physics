@@ -1,6 +1,6 @@
-﻿using BotBits;
+﻿using JetBrains.Annotations;
 using EEPhysics;
-using JetBrains.Annotations;
+using BotBits;
 
 namespace BotBitsExt.Physics
 {
@@ -39,6 +39,7 @@ namespace BotBitsExt.Physics
             var p = player.GetPhysicsPlayer();
             var x = WorldUtils.PosToBlock((int) p.X);
             var y = WorldUtils.PosToBlock((int) p.Y);
+
             return new Point(x, y);
         }
 
@@ -52,6 +53,7 @@ namespace BotBitsExt.Physics
         public static Point GetExactPositionInPixels(this Player player)
         {
             var p = player.GetPhysicsPlayer();
+
             return new Point((int) p.X, (int) p.Y);
         }
     }

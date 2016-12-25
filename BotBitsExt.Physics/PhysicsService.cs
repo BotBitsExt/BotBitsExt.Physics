@@ -33,6 +33,10 @@ namespace BotBitsExt.Physics
         private void On(JoinEvent e)
         {
             e.Player.SetPhysicsPlayer(PhysicsWorld.Players[e.Player.UserId]);
+            e.Player.GetPhysicsPlayer().OnBlockPositionChange += blockEvent =>
+            {
+                new BlockChangeEvent(blockEvent.Player, blockEvent.BlockX, blockEvent.BlockY, blockEvent.BlockId).RaiseIn(BotBits);
+            };
         }
 
         /// <summary>
@@ -53,6 +57,40 @@ namespace BotBitsExt.Physics
         private void On(PlayerIOMessageEvent e)
         {
             PhysicsWorld.HandleMessage(e.Message);
+        }
+    }
+
+    public sealed class BlockChangeEvent : Event<BlockChangeEvent>
+    {
+        /// <summary>
+        ///     Gets the Physics Player.
+        /// </summary>
+        /// <value>
+        ///     The player.
+        /// </value>
+        public PhysicsPlayer Player { get; private set; }
+
+        /// <summary>
+        /// Gets the Block X
+        /// </summary>
+        public int BlockX { get; private set; }
+
+        /// <summary>
+        /// Gets the Block Y
+        /// </summary>
+        public int BlockY { get; private set; }
+
+        /// <summary>
+        /// Gets the Block ID
+        /// </summary>
+        public int BlockId { get; private set; }
+
+        internal BlockChangeEvent(PhysicsPlayer player, int blockX, int blockY, int blockId)
+        {
+            Player = player;
+            BlockX = blockX;
+            BlockY = blockY;
+            BlockId = blockId;
         }
     }
 }

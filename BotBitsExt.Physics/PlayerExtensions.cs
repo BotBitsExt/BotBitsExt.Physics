@@ -37,10 +37,8 @@ namespace BotBitsExt.Physics
         public static Point GetExactPosition(this Player player)
         {
             var p = player.GetPhysicsPlayer();
-            var x = WorldUtils.PosToBlock((int) p.X);
-            var y = WorldUtils.PosToBlock((int) p.Y);
 
-            return new Point(x, y);
+            return new Point(p.BlockX, p.BlockY);
         }
 
         /// <summary>

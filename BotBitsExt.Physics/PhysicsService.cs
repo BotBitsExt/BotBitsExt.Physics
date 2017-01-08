@@ -8,17 +8,17 @@ namespace BotBitsExt.Physics
 {
     public sealed class PhysicsService : EventListenerPackage<PhysicsService>, IDisposable
     {
-        public PhysicsService()
-        {
-            PhysicsWorld = new PhysicsWorld();
-        }
-
         /// <summary>
         ///     Gets the physics world.
         /// </summary>
         /// <value>The physics world.</value>
         [UsedImplicitly]
         public PhysicsWorld PhysicsWorld { get; private set; }
+
+        public PhysicsService()
+        {
+            PhysicsWorld = new PhysicsWorld();
+        }
 
         void IDisposable.Dispose()
         {
@@ -35,7 +35,8 @@ namespace BotBitsExt.Physics
             e.Player.SetPhysicsPlayer(PhysicsWorld.Players[e.Player.UserId]);
             e.Player.GetPhysicsPlayer().OnBlockPositionChange += blockEvent =>
             {
-                new BlockChangeEvent(blockEvent.Player, blockEvent.BlockX, blockEvent.BlockY, blockEvent.BlockId).RaiseIn(BotBits);
+                new BlockChangeEvent(e.Player, blockEvent.Player, blockEvent.BlockX,
+                    blockEvent.BlockY, blockEvent.BlockId).RaiseIn(BotBits);
             };
         }
 
@@ -68,7 +69,15 @@ namespace BotBitsExt.Physics
         /// <value>
         ///     The player.
         /// </value>
-        public PhysicsPlayer Player { get; private set; }
+        public PhysicsPlayer PhysicsPlayer { get; private set; }
+
+        /// <summary>
+        ///     Gets the Botbits Player.
+        /// </summary>
+        /// <value>
+        ///     The player.
+        /// </value>
+        public Player Player { get; private set; }
 
         /// <summary>
         /// Gets the Block X
@@ -85,12 +94,13 @@ namespace BotBitsExt.Physics
         /// </summary>
         public int BlockId { get; private set; }
 
-        internal BlockChangeEvent(PhysicsPlayer player, int blockX, int blockY, int blockId)
+        internal BlockChangeEvent(Player player, PhysicsPlayer physicsPlayer, int blockX, int blockY, int blockId)
         {
+            PhysicsPlayer = physicsPlayer;
+            BlockId = blockId;
             Player = player;
             BlockX = blockX;
             BlockY = blockY;
-            BlockId = blockId;
         }
     }
 }

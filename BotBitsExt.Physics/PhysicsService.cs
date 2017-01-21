@@ -1,5 +1,4 @@
-﻿using JetBrains.Annotations;
-using BotBits.Events;
+﻿using BotBits.Events;
 using EEPhysics;
 using BotBits;
 using System;
@@ -12,7 +11,6 @@ namespace BotBitsExt.Physics
         ///     Gets the physics world.
         /// </summary>
         /// <value>The physics world.</value>
-        [UsedImplicitly]
         public PhysicsWorld PhysicsWorld { get; private set; }
 
         public PhysicsService()

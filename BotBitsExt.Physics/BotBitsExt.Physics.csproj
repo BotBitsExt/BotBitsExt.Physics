@@ -32,12 +32,8 @@
       <HintPath>..\packages\BotBits.218.0.3\lib\net40\BotBits.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="EEPhysics, Version=1.4.4.5, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\EEPhysics.1.4.4.5\lib\net40-Client\EEPhysics.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="JetBrains.Annotations, Version=10.1.4.0, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
-      <HintPath>..\packages\JetBrains.Annotations.10.1.4\lib\net20\JetBrains.Annotations.dll</HintPath>
+    <Reference Include="EEPhysics, Version=1.4.4.7, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EEPhysics.1.4.4.7\lib\net40-Client\EEPhysics.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="PlayerIOClient, Version=2.3.6.0, Culture=neutral, PublicKeyToken=c7f7b730653f6a44, processorArchitecture=MSIL">

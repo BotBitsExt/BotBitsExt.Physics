@@ -1,5 +1,4 @@
-﻿using JetBrains.Annotations;
-using EEPhysics;
+﻿using EEPhysics;
 using BotBits;
 
 namespace BotBitsExt.Physics
@@ -11,7 +10,6 @@ namespace BotBitsExt.Physics
         /// </summary>
         /// <returns>The physics player.</returns>
         /// <param name="player">Player.</param>
-        [UsedImplicitly]
         public static PhysicsPlayer GetPhysicsPlayer(this Player player)
         {
             return player.Get<PhysicsPlayer>("PhysicsPlayer");
@@ -33,7 +31,6 @@ namespace BotBitsExt.Physics
         /// </summary>
         /// <param name="player">The player.</param>
         /// <returns>The exact position of the player (in blocks).</returns>
-        [UsedImplicitly]
         public static Point GetExactPosition(this Player player)
         {
             var p = player.GetPhysicsPlayer();
@@ -47,7 +44,6 @@ namespace BotBitsExt.Physics
         /// </summary>
         /// <param name="player">The player</param>
         /// <returns>The exact position of the player (in pixels).</returns>
-        [UsedImplicitly]
         public static Point GetExactPositionInPixels(this Player player)
         {
             var p = player.GetPhysicsPlayer();

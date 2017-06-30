@@ -29,11 +29,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BotBits, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BotBits.220.2.1\lib\net40\BotBits.dll</HintPath>
+      <HintPath>..\packages\BotBits.221.0.8\lib\net40\BotBits.dll</HintPath>
     </Reference>
-    <Reference Include="EEPhysics, Version=1.4.4.7, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\EEPhysics.1.4.4.7\lib\net40-Client\EEPhysics.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="EEPhysics, Version=1.4.4.8, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EEPhysics.1.4.4.8\lib\net40-Client\EEPhysics.dll</HintPath>
     </Reference>
     <Reference Include="PlayerIOClient, Version=2.3.6.0, Culture=neutral, PublicKeyToken=c7f7b730653f6a44, processorArchitecture=MSIL">
       <HintPath>..\packages\PlayerIOClient-Signed.3.2.484\lib\PlayerIOClient.dll</HintPath>
